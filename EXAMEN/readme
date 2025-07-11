@@ -1,0 +1,17 @@
+CREATE database campusbike;
+
+USE campusbike;
+
+CREATE TABLE  if not exists proveedores( PRIMARY kEY id_proveedor INT, nombre_proveedor VARCHAR(30) NOT NULL, dirrecion VARCHAR(100), telefono INT, segumiento_pedidos VARCHAR(100));
+
+CREATE TABLE  if not exists  clientes( PRIMARY kEY id_cliente INT, nombre_cliente VARCHAR(30) NOT NULL, dirrecion VARCHAR(100), telefono INT);
+
+CREATE TABLE   if not exists  gestion_bicicletas( PRIMARY kEY id_bicicletas INT, modelo_bicicletaVARCHAR(30) ,  inventario_bicicletas INT, precio_bicicleta INT);
+
+CREATE TABLE   if not exists  gestion_repuestos( PRIMARY kEY id_repuestos INT, precio_producto INT, marca_repuesto VARCHAR(100);
+
+CREATE TABLE   if not exists  ventas( PRIMARY kEY id_venta INT, nombre_proveedor VARCHAR(100), cantidas_ventas INT, ganancia_venta INT);
+
+CREATE TABLE   if not exists  compra( PRIMARY kEY id_compra INT, nombre_cliente VARCHAR(100), cantidas_compra INT, precio_compra INT, FOREIGN KEY (id_cliente_fk)INT);
+
+
